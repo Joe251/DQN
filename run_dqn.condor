@@ -1,0 +1,25 @@
+####################
+##
+## Condor Demo for HTGC: Condor Submission File for Single Job
+##
+## Copyright (c) 2018 Antoni B. Chan
+## Dept. Computer Science, City University of Hong Kong
+####################
+
+### DEFAULT SETTINGS #########################
+#rank           = 
+priority        = 0
+notification    = Never
+notify_user     = 
+getenv          = True
+#environment    = HOME=$ENV(HOME)
+
+### JOB ###########################
+executable      = /usr/bin/python3
+arguments       = main.py
+input           =
+output          = main.out
+error           = $(output).err
+log             = main.log
+
+queue
